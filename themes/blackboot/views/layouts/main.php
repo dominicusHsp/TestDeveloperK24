@@ -53,7 +53,7 @@
 						'items'=>array(
 							array('label'=>'Home', 'url'=>array('/site/index')),
 							array('label'=>'Segitiga', 'url'=>array('/site/segitiga')),
-							array('label'=>'Member', 'url'=>array('/user/index')),
+							array('label'=>'Member', 'url'=>array('/user/index'),'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Manage Member', 'url'=>array('/User/admin', 'view'=>'about'), 'visible'=>Yii::app()->user->isAdmin()),
 							array('label'=>'Profile ('.Yii::app()->user->name.')',  'url'=>array('/user/view','id'=>Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest,),
 							array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
